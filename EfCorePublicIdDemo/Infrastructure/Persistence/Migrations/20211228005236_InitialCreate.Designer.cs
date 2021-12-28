@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EfCorePublicIdDemo.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211227214146_InitialCreate")]
+    [Migration("20211228005236_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,8 +23,7 @@ namespace EfCorePublicIdDemo.Infrastructure.Persistence.Migrations
                 {
                     b.Property<int>("_id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("Id");
+                        .HasColumnType("INTEGER");
 
                     b.Property<Guid>("Name")
                         .HasColumnType("TEXT");

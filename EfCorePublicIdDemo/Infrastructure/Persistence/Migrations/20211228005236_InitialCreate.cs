@@ -13,14 +13,14 @@ namespace EfCorePublicIdDemo.Infrastructure.Persistence.Migrations
                 name: "MyEntities",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    _id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<Guid>(type: "TEXT", nullable: false),
                     PublicId = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MyEntities", x => x.Id);
+                    table.PrimaryKey("PK_MyEntities", x => x._id);
                 });
         }
 

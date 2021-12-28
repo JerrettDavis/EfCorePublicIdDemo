@@ -9,8 +9,5 @@ public class MyEntityConfiguration : IEntityTypeConfiguration<MyEntity>
     public void Configure(EntityTypeBuilder<MyEntity> builder)
     {
         builder.HasKey("_id");
-        builder.Property("_id")
-            .HasColumnName("Id")
-            .ValueGeneratedOnAdd();
     }
 }

@@ -50,7 +50,7 @@ public class ConsoleWorker : IHostedService
                 var randomEntity = entities[random];
                 _logger.LogInformation("Getting entity by public ID");
                 var entityByPublic = await context.MyEntities
-                    .PublicEntitySingleAsync(randomEntity.PublicId, cancellationToken);
+                    .SinglePublicEntityAsync(randomEntity.PublicId, cancellationToken);
                 _logger.LogInformation("Random Entity {Entity}", entityByPublic);
                 
                 _appLifetime.StopApplication();

@@ -1,5 +1,6 @@
 using EfCorePublicIdDemo.Domain.Common;
 using EfCorePublicIdDemo.Domain.Entities;
+using EfCorePublicIdDemo.Infrastructure.Persistence.Extensions;
 using EfCorePublicIdDemo.Infrastructure.Persistence.Generators;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,15 +19,7 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
-        
-        var publicEntities = modelBuilder.Model.GetEntityTypes()
-            .Where(i => i.ClrType.IsAssignableTo(typeof(IPublicEntity)));
-        foreach (var item in publicEntities)
-        {
-            modelBuilder.Entity(item.ClrType)
-                .Property(nameof(IPublicEntity.PublicId))
-                .HasValueGenerator<PublicIdValueGenerator>();
-        }
+        modelBuilder.ConfigurePublicEntities();
         
         base.OnModelCreating(modelBuilder);
     }

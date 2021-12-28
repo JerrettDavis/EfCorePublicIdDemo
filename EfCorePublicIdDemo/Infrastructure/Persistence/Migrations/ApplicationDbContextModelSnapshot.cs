@@ -21,8 +21,7 @@ namespace EfCorePublicIdDemo.Infrastructure.Persistence.Migrations
                 {
                     b.Property<int>("_id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("Id");
+                        .HasColumnType("INTEGER");
 
                     b.Property<Guid>("Name")
                         .HasColumnType("TEXT");

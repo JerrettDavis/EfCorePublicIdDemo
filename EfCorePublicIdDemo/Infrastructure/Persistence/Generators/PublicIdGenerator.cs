@@ -1,4 +1,4 @@
-using EfCorePublicIdDemo.Application.Common;
+using EfCorePublicIdDemo.Application.Common.Interfaces;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.ValueGeneration;

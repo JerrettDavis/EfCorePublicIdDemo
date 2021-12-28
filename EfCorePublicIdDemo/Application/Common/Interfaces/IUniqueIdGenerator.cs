@@ -1,4 +1,4 @@
-namespace EfCorePublicIdDemo.Application.Common;
+namespace EfCorePublicIdDemo.Application.Common.Interfaces;
 
 public interface IUniqueIdGenerator
 {

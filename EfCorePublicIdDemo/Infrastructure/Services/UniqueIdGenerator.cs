@@ -1,4 +1,5 @@
 using EfCorePublicIdDemo.Application.Common;
+using EfCorePublicIdDemo.Application.Common.Interfaces;
 using IdGen;
 using Microsoft.Extensions.Options;
 

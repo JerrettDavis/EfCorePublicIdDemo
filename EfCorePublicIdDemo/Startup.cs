@@ -1,4 +1,5 @@
 using EfCorePublicIdDemo.Application.Common;
+using EfCorePublicIdDemo.Application.Common.Interfaces;
 using EfCorePublicIdDemo.Infrastructure.Persistence;
 using EfCorePublicIdDemo.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
